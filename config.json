@@ -1,0 +1,1 @@
+{ "notebook": { "folder": "nlp_day_02_project" , "q01_load_data_tfidf": "q01_load_data_tfidf.ipynb", "q02_count_vectorizer_for_LDA": "q02_count_vectorizer_for_LDA.ipynb", "q03_LDA": "q03_LDA.ipynb", "q04_topic_modelling": "q04_topic_modelling.ipynb"} }
