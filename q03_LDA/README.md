@@ -26,3 +26,9 @@ which is used in topic modelling
 | Return | dtype | description |
 | --- | --- | --- | 
 | variable1 | numpy.ndarray | Array of component matrix |
+
+Note : While using `CountVectorizer` use the following parameters
+- n_components=20
+- random_state=1
+- learning_method='batch'
+- max_iter=500
