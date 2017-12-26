@@ -4,6 +4,7 @@ import dill
 import pandas as pd
 from ..build import q04_topic_modelling
 from numpy.testing import assert_array_equal
+from greyatomlib.nlp_day_02_project.q04_topic_modelling.build import q04_topic_modelling as original
 
 class Testing(unittest.TestCase):
     def setUp(self):
@@ -12,7 +13,7 @@ class Testing(unittest.TestCase):
             dill.dump(q04_topic_modelling, f)
 
         with open('test_sol.pkl', 'wb') as f:
-            dill.dump(q04_topic_modelling, f)
+            dill.dump(original, f)
         with open('user_sol.pkl', 'rb') as f:
             self.student_func = dill.load(f)
         with open('test_sol.pkl', 'rb') as f:

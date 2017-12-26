@@ -2,10 +2,11 @@ import unittest
 from inspect import getargspec
 import dill
 import sys
-from ..build import q01_load_data_tfidf
+from ..build import q01_load_data_tfidf 
 import pandas as pd
 from pandas.util.testing import assert_frame_equal,assert_series_equal
 from numpy.testing import assert_array_equal
+from greyatomlib.nlp_day_02_project.q01_load_data_tfidf.build import q01_load_data_tfidf as original
 
 class Testing(unittest.TestCase):
     def setUp(self):
@@ -14,7 +15,7 @@ class Testing(unittest.TestCase):
             dill.dump(q01_load_data_tfidf, f)
 
         with open('test_sol.pkl', 'wb') as f:
-            dill.dump(q01_load_data_tfidf, f)
+            dill.dump(original, f)
         with open('user_sol.pkl', 'rb') as f:
             self.student_func = dill.load(f)
         with open('test_sol.pkl', 'rb') as f:

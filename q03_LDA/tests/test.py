@@ -3,6 +3,7 @@ from inspect import getargspec
 import dill
 from ..build import q03_LDA
 from numpy.testing import assert_array_equal
+from greyatomlib.nlp_day_02_project.q03_LDA.build import q03_LDA as original
 
 class Testing(unittest.TestCase):
     def setUp(self):
@@ -11,7 +12,7 @@ class Testing(unittest.TestCase):
             dill.dump(q03_LDA, f)
 
         with open('test_sol.pkl', 'wb') as f:
-            dill.dump(q03_LDA, f)
+            dill.dump(original, f)
         with open('user_sol.pkl', 'rb') as f:
             self.student_func = dill.load(f)
         with open('test_sol.pkl', 'rb') as f:

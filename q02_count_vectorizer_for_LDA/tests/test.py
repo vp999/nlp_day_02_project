@@ -6,6 +6,7 @@ import pandas as pd
 from ..build import q02_count_vectorizer_for_LDA
 from pandas.util.testing import assert_frame_equal, assert_series_equal
 from numpy.testing import assert_array_equal
+from greyatomlib.nlp_day_02_project.q02_count_vectorizer_for_LDA.build import q02_count_vectorizer_for_LDA as original
 
 
 class Testing(unittest.TestCase):
@@ -15,7 +16,7 @@ class Testing(unittest.TestCase):
             dill.dump(q02_count_vectorizer_for_LDA, f)
 
         with open('test_sol.pkl', 'wb') as f:
-            dill.dump(q02_count_vectorizer_for_LDA, f)
+            dill.dump(original, f)
         with open('user_sol.pkl', 'rb') as f:
             self.student_func = dill.load(f)
         with open('test_sol.pkl', 'rb') as f:
